@@ -29,7 +29,6 @@ jobs:
         with:
           name: java-app
           path: '${{ github.workspace }}/target/*.jar'
-          retention-days: 1
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,5 +49,5 @@ jobs:
         with:
           app-name: 'DommerPortal'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4EB79069DD2E45F1A18408679EBD45E6 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3DEDF8E00E7B497AAB7C2A898BB2F3DC }}
           package: '*.jar'
